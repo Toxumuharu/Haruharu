@@ -15,7 +15,6 @@ struct CalendarView: View {
                    selection: $date,
                    displayedComponents: [.date])
             .datePickerStyle(GraphicalDatePickerStyle())
-            .padding()
     }
 }
 

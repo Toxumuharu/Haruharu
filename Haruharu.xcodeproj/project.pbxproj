@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3EA1361925D8036D00F028DC /* UIScreen+ScreenSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA1361825D8036D00F028DC /* UIScreen+ScreenSize.swift */; };
+		3EC8455725D8193500BCFF6B /* CheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC8455625D8193500BCFF6B /* CheckView.swift */; };
 		3EE6AF4725D2C70D00865950 /* HaruharuApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE6AF4625D2C70D00865950 /* HaruharuApp.swift */; };
 		3EE6AF4925D2C70D00865950 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE6AF4825D2C70D00865950 /* ContentView.swift */; };
 		3EE6AF4B25D2C71100865950 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EE6AF4A25D2C71100865950 /* Assets.xcassets */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3EA1361825D8036D00F028DC /* UIScreen+ScreenSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+ScreenSize.swift"; sourceTree = "<group>"; };
+		3EC8455625D8193500BCFF6B /* CheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckView.swift; sourceTree = "<group>"; };
 		3EE6AF4325D2C70D00865950 /* Haruharu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Haruharu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EE6AF4625D2C70D00865950 /* HaruharuApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HaruharuApp.swift; sourceTree = "<group>"; };
 		3EE6AF4825D2C70D00865950 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,7 +60,9 @@
 			children = (
 				3EE6AF4625D2C70D00865950 /* HaruharuApp.swift */,
 				3EE6AF4825D2C70D00865950 /* ContentView.swift */,
+				3EC8455625D8193500BCFF6B /* CheckView.swift */,
 				3EE6AF5625D2CC3300865950 /* CalendarView.swift */,
+				3EA1361825D8036D00F028DC /* UIScreen+ScreenSize.swift */,
 				3EE6AF4A25D2C71100865950 /* Assets.xcassets */,
 				3EE6AF4F25D2C71100865950 /* Info.plist */,
 				3EE6AF4C25D2C71100865950 /* Preview Content */,
@@ -141,9 +147,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EA1361925D8036D00F028DC /* UIScreen+ScreenSize.swift in Sources */,
 				3EE6AF4925D2C70D00865950 /* ContentView.swift in Sources */,
 				3EE6AF4725D2C70D00865950 /* HaruharuApp.swift in Sources */,
 				3EE6AF5725D2CC3300865950 /* CalendarView.swift in Sources */,
+				3EC8455725D8193500BCFF6B /* CheckView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

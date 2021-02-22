@@ -11,33 +11,46 @@ struct ContentView: View {
     @State private var userLearn = ""
     @State private var message = ""
     @State private var editting = false
-    @State private var arr = ["1","2","3"]
-    
+    @State private var arr = [String]()
+    @State var new = ""
     
     var body: some View {
-        
+        //        ScrollView {
         VStack{
-            ScrollView {
-                CalendarView()
-                    .border(Color.red, width: 2)
+            CalendarView()
+                .frame(
+                    maxWidth: UIScreen.screenWidth * 0.6
+                )
+            //                .border(Color.red, width: 2)
+
+            List {
+                ForEach(arr.indices, id: \.self) { i in
+                    TextField("", text: $arr[i], onEditingChanged: { (changed) in
+                        print("onEditingChanged")
+                    }) {
+                        for item in arr {
+                            print(item)
+                        }
+                    }
+                    .textFieldStyle(PlainTextFieldStyle())
+                }
                 
-                    
-                TextField("Enter what you learn today", text: $userLearn, onEditingChanged: { (changed) in
+                TextField("Input here", text: $new, onEditingChanged: { (changed) in
                     print("Username onEditingChanged - \(changed)")
                 }) {
                     print("Username onCommit")
-                }
-                
-                ForEach(self.arr.indices, id:\.self) {
-                    TextField("", text: self.$arr[$0])
-                        .textFieldStyle(PlainTextFieldStyle())
-                        .padding(2)
+                    arr.append(new)
+                    new = ""
+
+                    for item in arr {
+                        print(item)
+                    }
                 }
             }
-            .padding(.leading, 5)
-            .padding(3)
-        }.padding()
-        Spacer()
+            Spacer()
+            
+        }
+        .padding()
     }
 }
 
