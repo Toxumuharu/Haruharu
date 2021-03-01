@@ -24,7 +24,6 @@ struct CustomTextField: UIViewRepresentable {
         
         func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
             didBecomeFirstResponder = false
-
             print("log: \(#function): index: \(index), currentlySelectedCell: \(self.currentlySelectedCell)")
             return true
         }
@@ -48,6 +47,7 @@ struct CustomTextField: UIViewRepresentable {
         func textFieldShouldReturn(_ textField: UITextField) -> Bool {
             self.currentlySelectedCell = self.index // foreach index
             self.currentlySelectedCell += 1
+            didBecomeFirstResponder = false
             
             print("log: \(#function): index: \(index), currentlySelectedCell: \(self.currentlySelectedCell)")
             return true
@@ -73,6 +73,7 @@ struct CustomTextField: UIViewRepresentable {
     
     func updateUIView(_ uiView: UITextField, context: UIViewRepresentableContext<CustomTextField>) {
         uiView.text = text
+        print("log: \(#function): isFirstResponder: \(isFirstResponder), !didBecomeFirstResponder: \(!context.coordinator.didBecomeFirstResponder)")
         if isFirstResponder && !context.coordinator.didBecomeFirstResponder  {
             uiView.becomeFirstResponder()
             context.coordinator.didBecomeFirstResponder = true

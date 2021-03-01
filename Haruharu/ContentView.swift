@@ -28,7 +28,7 @@ struct ContentView: View {
                     HStack{
                         CheckView()
                         TextField("", text: $arr[i], onEditingChanged: { (changed) in
-                            print("onEditingChanged")
+                            print("log: onEditingChanged")
                         }) {
                             for item in arr {
                                 print(item)
@@ -40,9 +40,9 @@ struct ContentView: View {
                 HStack{
                     CheckView()
                     TextField("Input here", text: $new, onEditingChanged: { (changed) in
-                        print("Username onEditingChanged - \(changed)")
+                        print("log: Username onEditingChanged - \(changed)")
                     }) {
-                        print("Username onCommit")
+                        print("log: Username onCommit")
                         arr.append(new)
                         new = ""
 
@@ -54,7 +54,6 @@ struct ContentView: View {
             }
             
 //            List{
-//                //https://www.hackingwithswift.com/forums/100-days-of-swiftui/jump-focus-between-a-series-of-textfields-pin-code-style-entry-widget/765
 //                ForEach(0 ..< self.numberOfCells) { index in
 //                    CharacterInputCell(currentlySelectedCell: self.$currentlySelectedCell, index: index)
 //                        .frame(maxHeight: UIScreen.screenHeight * 0.08)
